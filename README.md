@@ -225,19 +225,6 @@ gofmt -w basicVariables.go
 4. Write a small variation without copying the original solution.
 5. Record questions and review the related roadmap section.
 
-## Repository Structure
-
-```text
-GO-Fundamentals/
-├── Basic Variables/
-│   └── basicVariables.go
-├── Declaring a Variable/
-│   └── code.go
-├── Learn to run Go/
-│   └── textio.go
-└── README.md
-```
-
 ## Go Commands Cheat Sheet
 
 | Command | Purpose |
