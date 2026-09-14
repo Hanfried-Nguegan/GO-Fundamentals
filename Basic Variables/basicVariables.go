@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var username string
+	//var username string
+	username := "1"
 	username = "Hanfried Nguegan"
 
 	var isAdmin bool
