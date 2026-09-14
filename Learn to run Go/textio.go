@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("starting Textio server")
+	fmt.Println("The compiled textio server is starting")
 }
