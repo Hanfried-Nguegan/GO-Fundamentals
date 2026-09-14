@@ -225,25 +225,6 @@ gofmt -w basicVariables.go
 4. Write a small variation without copying the original solution.
 5. Record questions and review the related roadmap section.
 
-## Progress Checklist
-
-- [x] Run a basic Go program
-- [x] Print text with `fmt.Println`
-- [x] Declare and initialize variables
-- [ ] Use constants and short declarations
-- [ ] Control program flow
-- [ ] Write functions
-- [ ] Work with slices and maps
-- [ ] Define structs and methods
-- [ ] Handle errors
-- [ ] Create packages and modules
-- [ ] Read and write files
-- [ ] Write tests
-- [ ] Use goroutines and channels
-- [ ] Build a complete Go project
-
-The checklist reflects the lessons currently present in the repository and can be updated as new exercises are added.
-
 ## Repository Structure
 
 ```text
