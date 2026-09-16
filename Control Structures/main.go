@@ -2,6 +2,13 @@ package main
 
 import "fmt"
 
+// import "os"
+
+// func writeBalanceToFile(balance float64) {
+// 	balanceText := fmt.Sprint(balance)
+// 	os.WriteFile("balance.txt", []byte(balanceText) )
+// }
+
 func main() {
 	var accountBalance = 1000.0
 
@@ -20,9 +27,10 @@ func main() {
 
 		// wantsCheckBalance := choice == 1
 
-		if choice == 1 {
+		switch choice {
+		case 1:
 			fmt.Println("Your balance is: ", accountBalance)
-		} else if choice == 2 {
+		case 2:
 			fmt.Print("Your Deposit: ")
 			var depositAmount float64
 			fmt.Scan(&depositAmount)
@@ -35,27 +43,27 @@ func main() {
 
 			accountBalance += depositAmount
 			fmt.Println("Balance updated ! New Amount:", accountBalance)
-		} else if choice == 3 {
+		case 3:
 			fmt.Print("Your Withdrawal: ")
 			var withdrawAmount float64
 			fmt.Scan(&withdrawAmount)
 
 			if withdrawAmount <= 0 {
 				fmt.Println("Invalid amount. must be greater than 0")
-				return
+				continue
 			}
 
 			if withdrawAmount > accountBalance {
 				fmt.Println("INvalid amount. You can't withdraw more than what you have")
-				return
+				continue
 			}
 			accountBalance -= withdrawAmount
 			fmt.Println("You withdrew:", withdrawAmount, "Your new balance is:", accountBalance)
-		} else {
+		default:
 			fmt.Println("Program Exited")
-			//return
-			break
+			fmt.Println("Thanks for choosing our bank")
+			return
+			//break
 		}
 	}
-	fmt.Println("Thanks for choosing our bank")
 }
