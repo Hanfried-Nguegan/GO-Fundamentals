@@ -20,6 +20,11 @@ func main() {
 		return
 	}
 
+	admin := user.NewAdmin("test@gmail.com", "12345")
+	admin.User.OutputPlayerDetails()
+	admin.User.ClearUsername()
+	admin.User.OutputPlayerDetails()
+
 	appUser.OutputPlayerDetails()
 	appUser.ClearUsername()
 	appUser.OutputPlayerDetails()
