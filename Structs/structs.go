@@ -34,7 +34,6 @@ func main() {
 }
 
 func outputPlayerDetails(u User) {
-	// how to print out the user data on multiple lines in a single print statement?
 	fmt.Printf("Firstname: %s\n Lastname: %s\n Birthdate: %s\n CreatedAt %s\n", u.firstName, u.lastName, u.birthdate, u.createdAt)
 }
 
