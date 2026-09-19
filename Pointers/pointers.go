@@ -2,35 +2,39 @@
 
 package main
 
-// package main
+import "fmt"
 
-// import (
-// 	"fmt"
-// )
+type BigData struct {
+	// 500 MB
+}
 
-// type User struct {
-// 	email    string
-// 	username string
-// 	age      int
-// 	file     []byte
-// }
+// 8 bytes => pointer (64bit machines)
+func processBigData(bd *BigData) {
 
-// func (u User) Email() string {
-// 	return u.email
-// }
+}
 
-// func (u *User) updateEmail(email string) {
-// 	u.email = email
-// }
+type Player struct {
+	health int
+}
 
-// func Email(user User) string {
-// 	return user.email
-// }
+func (player *Player) takeDamageFromExplosion(dmg int) {
+	fmt.Println("PLAYER IS TAKING DAMAGE FROM EXPLOSION")
+	player.health -= dmg
+}
 
-// func main() {
-// 	user := User{
-// 		email: "hanfried@gmail.com",
-// 	}
-// 	user.updateEmail("hoodini@gmail.com")
-// 	fmt.Println(user.Email())
-// }
+func takeDamageFromExplosion(player Player, dmg int) {
+	fmt.Println("PLAYER IS TAKING DAMAGE FROM EXPLOSION")
+	player.health -= dmg
+}
+
+func main() {
+	player := &Player{
+		health: 100,
+	}
+	// 8 byte long integer pointer
+
+	fmt.Printf("BEFORE EXPLOSION %+v\n", player)
+	player.takeDamageFromExplosion((50))
+	fmt.Printf("AFTER EXPLOSION %+v\n", player)
+
+}
