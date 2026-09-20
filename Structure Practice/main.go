@@ -7,10 +7,37 @@ import (
 	"strings"
 
 	"github.com/structure_practice/note"
+	"github.com/structure_practice/todo"
 )
+
+type saver interface {
+	Save() error
+}
+
+// type displayer interface {
+// 	Display()
+// }
+
+type outputable interface {
+	saver
+	Display()
+}
+
+// type outputable interface {
+// 	Save() error
+// 	Display()
+// }
 
 func main() {
 	title, content := getNoteData()
+	todoText := getUserInput("Todo Text:")
+
+	todo, err := todo.New(todoText)
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 
 	userNote, err := note.New(title, content)
 
@@ -19,16 +46,30 @@ func main() {
 		return
 	}
 
-	userNote.Display()
-
-	userNote.Save()
+	err = outputData(todo)
 
 	if err != nil {
-		fmt.Println("Saving the note failed")
 		return
 	}
 
+	err = outputData(userNote)
+}
+
+func outputData(data outputable) error {
+	data.Display()
+	return saveData(data)
+}
+
+func saveData(data saver) error {
+	err := data.Save()
+
+	if err != nil {
+		fmt.Println("Saving the note failed")
+		return err
+	}
+
 	fmt.Println("Saving the note succeeded")
+	return nil
 }
 
 func getNoteData() (string, string) {
