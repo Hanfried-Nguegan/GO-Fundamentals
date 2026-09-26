@@ -1,223 +1,215 @@
-# Go Fundamentals
+# Go Fundamentals Workspace
 
-A practical, progressive course for learning the foundations of Go from the ground up. Each lesson is kept small and focused so that the language's syntax, conventions, and standard library become familiar through repetition and practice.
+This repository is a hands-on Go learning workspace covering the foundations of the Go language, common patterns, and a small REST API project built with Gin and SQLite.
 
-## Learning Goals
+It contains many small standalone examples and mini-projects, each designed to reinforce a specific concept. The goal is to move from basic syntax and structures to practical application development in a structured, progressive way.
 
-By the end of this course, you should be able to:
+## Why this workspace exists
 
-- Read and write idiomatic Go programs.
-- Declare variables, constants, and custom types.
-- Control program flow with conditions, loops, and `switch` statements.
-- Work confidently with arrays, slices, maps, and structs.
-- Write reusable functions and methods.
-- Handle errors explicitly and design useful error messages.
-- Use pointers, interfaces, and Go's composition-based design style.
-- Organize code into packages and modules.
-- Write tests, benchmarks, and examples with Go's standard tooling.
-- Build concurrent programs with goroutines and channels.
-- Use the standard library to work with files, JSON, HTTP, and command-line input.
+The project is organized as a collection of small exercises and sample apps rather than a single large application. That makes it easy to:
+
+- learn one concept at a time,
+- run examples in isolation,
+- practice Go syntax and tooling,
+- build toward a real backend project.
 
 ## Prerequisites
 
-- A basic understanding of programming concepts is helpful, but not required.
-- Go installed from [go.dev](https://go.dev/dl/).
-- A terminal and a code editor such as VS Code.
+Before running the code in this workspace, make sure you have:
 
-Check your installation with:
+- Go installed on your machine
+- A terminal and code editor, preferably VS Code
+- Basic familiarity with programming concepts
+
+Check your installation:
 
 ```bash
 go version
 ```
 
-## Course Roadmap
+## Workspace structure
 
-### 1. Getting Started
+At the root of the project you will find a mix of standalone beginner exercises and a few more advanced mini projects.
 
-- [Running Go programs](Learn%20to%20run%20Go/textio.go)
-- The `package main` declaration
-- The `main` function
-- Imports and formatted output
-- `go run`, `go build`, and `go fmt`
-- Go source file and package conventions
+### Core learning folders
 
-### 2. Variables and Constants
+- [Arrays](Arrays)
+- [Basic Variables](Basic%20Variables)
+- [Control Structures](Control%20Structures)
+- [Converting Between Types](Converting%20Between%20Types)
+- [Declaring a Variable](Declaring%20a%20Variable)
+- [Functions](Functions)
+- [Go Essentials](Go%20Essentials)
+- [Go Routines](Go%20Routines)
+- [Interfaces](Interfaces)
+- [Learn to run Go](Learn%20to%20run%20Go)
+- [More Structs](More%20Structs)
+- [Pointers](Pointers)
+- [Practice](Practice)
+- [Practice Slices](Practice%20Slices)
+- [Price Calculator](Price%20Calculator)
+- [Profit Calculator](Profit%20Calculator)
+- [Same Line Declaration](Same%20Line%20Declaration)
+- [Sandbox](Sandbox)
+- [Short Variable Declaration](Short%20Variable%20Declaration)
+- [Static Types](Static%20Types)
+- [Structs](Structs)
+- [Structure Practice](Structure%20Practice)
 
-- [Basic variables](Basic%20Variables/basicVariables.go)
-- [Declaring a variable](Declaring%20a%20Variable/code.go)
-- Explicit variable declarations with `var`
-- Short declarations with `:=`
-- Constants with `const`
-- Zero values
-- Type inference
-- Scope and naming conventions
+### Project-style examples
 
-### 3. Basic Types and Operators
+- [REST API PROJECT](REST%20API%20PROJECT) — a small CRUD API built with Gin and SQLite.
 
-- Booleans and boolean expressions
-- Integers and floating-point numbers
-- Strings and runes
-- Type conversion
-- Arithmetic, comparison, and logical operators
-- Bitwise operators and hexadecimal values
-- `iota` and enumerated constants
+## Learning path
 
-### 4. Control Flow
+The workspace roughly follows a typical Go fundamentals progression:
 
-- `if`, `else if`, and `else`
-- Initialization statements in `if`
-- `for` loops
-- `range`
-- `break` and `continue`
-- `switch` statements
-- `defer`
+1. Variables, constants, and basic types
+2. Control flow and common operators
+3. Functions and method design
+4. Arrays, slices, maps, and structs
+5. Pointers, interfaces, and standard library usage
+6. Error handling and reusable patterns
+7. File I/O and JSON handling
+8. Concurrency with goroutines
+9. HTTP APIs and database-backed services
 
-### 5. Functions
+Each folder is intentionally small and focused so you can experiment without getting lost in a large codebase.
 
-- Parameters and return values
-- Multiple return values
-- Named return values
-- Variadic functions
-- Anonymous functions and closures
-- Recursion
-- Function values
+## Running examples
 
-### 6. Collections
+Most folders are standalone Go modules and can be run from within their own directory.
 
-- Arrays
-- Slices and their length and capacity
-- Creating slices with `make`
-- Appending and copying
-- Two-dimensional slices
-- Maps
-- Checking whether a map key exists
-- Deleting map entries
-
-### 7. Structs and Custom Types
-
-- Defining structs
-- Struct literals
-- Accessing and updating fields
-- Struct embedding
-- Defining named types
-- Methods and receivers
-- Pointer receivers
-- JSON tags
-
-### 8. Pointers and Interfaces
-
-- Addresses and dereferencing
-- When to use pointers
-- `nil`
-- Interface values
-- Implicit interface implementation
-- The empty interface and `any`
-- Type assertions
-- Type switches
-
-### 9. Errors and Reliability
-
-- The `error` interface
-- Returning and checking errors
-- Creating errors with `errors.New`
-- Wrapping errors with `fmt.Errorf`
-- `errors.Is` and `errors.As`
-- Custom error types
-- `panic` and `recover`
-- Input validation
-
-### 10. Packages and Modules
-
-- Package boundaries
-- Exported and unexported identifiers
-- Import paths
-- Initializing a module with `go mod init`
-- Managing dependencies with `go mod tidy`
-- Package documentation
-- Internal packages
-
-### 11. Files and the Standard Library
-
-- Reading and writing files
-- Buffered I/O
-- Working with directories and paths
-- Command-line arguments and flags
-- Environment variables
-- Dates and times
-- JSON encoding and decoding
-- Regular expressions
-- Useful packages including `fmt`, `strings`, `strconv`, `os`, `io`, and `path/filepath`
-
-### 12. Testing and Tooling
-
-- Table-driven tests
-- Test files and `go test`
-- Subtests
-- Test helpers
-- Benchmarks
-- Examples
-- Code coverage
-- `go vet`
-- Formatting with `gofmt`
-- Static analysis and documentation tools
-
-### 13. Concurrency
-
-- Goroutines
-- Channels
-- Buffered and unbuffered channels
-- Sending and receiving values
-- Closing channels
-- `select`
-- `sync.WaitGroup`
-- Mutexes and shared state
-- Race detection with `go test -race`
-- Context cancellation
-
-### 14. Networking and HTTP
-
-- HTTP clients and requests
-- HTTP servers
-- Handlers and routing
-- Request methods, headers, and status codes
-- Query parameters and request bodies
-- JSON APIs
-- Timeouts and cancellation
-- Testing HTTP handlers
-
-### 15. Practical Go Projects
-
-The concepts in this course should eventually be combined into small projects such as:
-
-- A command-line task manager
-- A file or directory organizer
-- A JSON-backed notes API
-- A URL shortener
-- A concurrent web scraper
-- A small HTTP service with tests
-
-## Running a Lesson
-
-Most early lessons are standalone Go programs. Change into the lesson's directory and provide the file to `go run`:
+### Example: run a simple program
 
 ```bash
 cd "Basic Variables"
 go run basicVariables.go
 ```
 
-You can also run every Go file in the current package with:
+### Example: run a folder that contains a package
 
 ```bash
+cd "Functions"
 go run .
 ```
 
-Format a lesson before committing it:
+### Example: format Go files
 
 ```bash
 gofmt -w basicVariables.go
 ```
 
-## Recommended Study Routine
+### Example: tidy module dependencies
+
+```bash
+go mod tidy
+```
+
+## REST API project
+
+The [REST API PROJECT](REST%20API%20PROJECT) is the most complete sample in this workspace. It demonstrates a simple event management API using:
+
+- Go
+- Gin web framework
+- SQLite database
+- JSON request/response handling
+- CRUD routes for events
+
+### Project layout
+
+- [REST API PROJECT/main.go](REST%20API%20PROJECT/main.go) — app entry point
+- [REST API PROJECT/db/db.go](REST%20API%20PROJECT/db/db.go) — database initialization and table creation
+- [REST API PROJECT/models/event.go](REST%20API%20PROJECT/models/event.go) — event model and database operations
+- [REST API PROJECT/routes/routes.go](REST%20API%20PROJECT/routes/routes.go) — route registration
+- [REST API PROJECT/routes/events.go](REST%20API%20PROJECT/routes/events.go) — request handlers
+- [REST API PROJECT/api-test](REST%20API%20PROJECT/api-test) — HTTP request examples for testing the API
+
+### Run the API
+
+From the project folder:
+
+```bash
+cd "REST API PROJECT"
+go run .
+```
+
+The server runs on:
+
+```text
+http://localhost:8080
+```
+
+### Available routes
+
+| Method | Route | Description |
+| --- | --- | --- |
+| GET | /events | Retrieve all events |
+| GET | /events/:id | Retrieve one event |
+| POST | /events | Create an event |
+| PUT | /events/:id | Update an event |
+| DELETE | /events/:id | Delete an event |
+
+### Example payload
+
+```json
+{
+  "name": "Test Event",
+  "description": "A test event",
+  "location": "A test location",
+  "dateTime": "2025-01-01T15:30:00.000Z"
+}
+```
+
+You can test the API using the included HTTP examples in [REST API PROJECT/api-test](REST%20API%20PROJECT/api-test) or with tools like Postman or VS Code REST Client.
+
+## Popular commands
+
+```bash
+# run a single file
+cd "Learn to run Go"
+go run textio.go
+
+# run a module
+cd "REST API PROJECT"
+go run .
+
+# install dependencies
+go mod tidy
+
+# check for compile issues
+go build ./...
+
+# format code
+gofmt -w .
+```
+
+## Tips for learning effectively
+
+- Start with the simplest folders first.
+- Run each example on its own before moving to the next concept.
+- Read the code slowly and experiment by editing small values.
+- Re-run examples after changing inputs to understand what the code is doing.
+- Use the REST API project as a capstone exercise after the fundamentals.
+
+## Recommended next steps
+
+After you finish the beginner lessons, consider exploring:
+
+- database integration with SQLite or PostgreSQL,
+- authentication and authorization,
+- testing with Go's built-in test framework,
+- concurrency patterns and worker pools,
+- deployment and containerization.
+
+## License
+
+This workspace is intended for learning and experimentation. Use it as a personal study project and adapt the code however you like.
+
+## Notes
+
+This repository is a collection of educational examples and mini-projects. Some folders are intentionally simple and meant to demonstrate a single concept at a time, while the REST API project shows how those concepts combine in a real application.
+
 
 1. Read the lesson and predict what the program will print.
 2. Run the program and compare the result with your prediction.
