@@ -1,4 +1,4 @@
-# Go Fundamentals Workspace
+# Go Fundamentals
 
 This repository is a hands-on Go learning workspace covering the foundations of the Go language, common patterns, and a small REST API project built with Gin and SQLite.
 
@@ -202,14 +202,9 @@ After you finish the beginner lessons, consider exploring:
 - concurrency patterns and worker pools,
 - deployment and containerization.
 
-## License
-
-This workspace is intended for learning and experimentation. Use it as a personal study project and adapt the code however you like.
-
 ## Notes
 
 This repository is a collection of educational examples and mini-projects. Some folders are intentionally simple and meant to demonstrate a single concept at a time, while the REST API project shows how those concepts combine in a real application.
-
 
 1. Read the lesson and predict what the program will print.
 2. Run the program and compare the result with your prediction.
@@ -241,4 +236,6 @@ This repository is a collection of educational examples and mini-projects. Some 
 
 ## License
 
-This repository is a personal learning project. Add a license here if you decide to share or distribute the code under specific terms.
+This project is licensed under the [MIT License](LICENSE).
+
+Copyright (c) 2026 Hanfried Nguegan
